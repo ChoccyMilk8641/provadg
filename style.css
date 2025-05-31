@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+  /* Cores principais - Paleta moderna */
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --card-bg: rgba(255, 255, 255, 0.1);
+  --primary: #2aff6e;
+  --primary-light: #7ef1a2;
+  --primary-dark: #00be3c;
+  --primary-gradient: linear-gradient(135deg, #6366f1, #4f46e5);
+  --secondary: #ec4899;
+  --secondary-light: #f472b6;
+  --secondary-gradient: linear-gradient(135deg, #ec4899, #db2777);
+  --accent: #14b8a6;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --border: rgba(226, 232, 240, 0.8);
+
+  /* Espaçamentos refinados */
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+
+  /* Bordas e sombras modernas */
+  --radius-sm: 0.25rem;
+  --radius: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-full: 9999px;
+
+  /* Sombras com profundidade */
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+  --shadow-md: 0 8px 16px rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 16px 24px rgba(15, 23, 42, 0.12), 0 4px 8px rgba(15, 23, 42, 0.05);
+  --shadow-inner: inset 0 2px 4px rgba(15, 23, 42, 0.05);
+
+  /* Transições suaves */
+  --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Glassmorphism */
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.5);
+  --glass-shadow: 0 8px 32px rgba(15, 23, 42, 0.1);
+  --glass-blur: 5px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: var(--background);
+  color: var(--foreground);
+  line-height: 1.6;
+  padding: var(--spacing-6);
+}
+
+.container {
+  max-width: 550px;
+  margin: 0 auto;
+  padding: var(--spacing-4);
+  display: flex;
+  gap: var(--spacing-10);
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  transition: var(--transition);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  flex-direction: column;
+  max-width: 100%;
+}
+
+
+.foto {
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  flex: none;
+  height: 220px;
+}
+
+.button {
+ /* colocar o button para do lado do "discount", não sei fazer isso :> */
+background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+padding: var(--spacing-1) var(--spacing-3);
+cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+.card.content {
+flex: 1;
+  padding: var(--spacing-6);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+
+.titulo-grupo {
+  color: var(--foreground);
+  margin-top: var(--spacing-3);
+  margin: var(--spacing-3);
+}
+
+.container2 {
+  max-width: 550px;
+  margin: 0 auto;
+  padding: var(--spacing-4);
+  display: flex;
+  gap: var(--spacing-10);
+}
+
+.card2 {
+  background-color: var(--card-bg);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  transition: var(--transition);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  flex-direction: column;
+  max-width: 100%;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  border-top: 1px solid var(--border);
+  padding-top: var(--spacing-4);
+}
+
+.autor {
+   display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+
+.avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.autor-info {
+  display: flex;
+  flex-direction: column;
+
+}
+/*ARRUMAR INFO DO AUTOR DEPOIS PARA NAO PERDER TEMPO*/
+
+.mensagem-texto {
+  border: 1px ;
+  background-color: var(--border);
+  border-radius: 10px;
+  display: flex;
+  padding: 5px;
+  width: 250px;
+  box-sizing: border-box;
+  margin: 20px;
+}
+
+.caixa-escrever {
+  border: 1px ;
+  background-color: var(--border);
+  border-radius: 10px;
+  display: flex;
+  padding: 20px;
+  width: 500px;
+  box-sizing: border-box;
+  margin: 10px;
+}
+
+.enviar {
+  border: 1px;
+  position:absolute;
+  display: flex;
+  margin-left:400px;
+  box-sizing: border-box;
+  padding: 5px;
+}
